@@ -1,9 +1,9 @@
 name: "UI-Test"
 on:
-    pull_request:
-        paths-ignore:
-            - 'LICENSE'
-            - 'docs/**'
+    #pull_request:
+    #    paths-ignore:
+    #        - 'LICENSE'
+    #        - 'docs/**'
     push:
         tags-ignore:
             - 'v*'
