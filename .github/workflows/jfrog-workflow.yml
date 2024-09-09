@@ -4,6 +4,7 @@ on: push
 jobs:
   build:
     runs-on: ubuntu-latest
+    environment: frogbot
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -22,7 +23,7 @@ jobs:
 
       - name: Run JFrog CLI
         run: |
-          jfrog c add ${{ secrets.JF_SERVER_ID }} --url ${{ secrets.JF_URL }} --access-token ${{ secrets.JF_ACCESS_TOKEN }}
+          #jfrog c add ${{ secrets.JF_SERVER_ID }} --url ${{ secrets.JF_URL }} --access-token ${{ secrets.JF_ACCESS_TOKEN }}
           # Ping the server
           jf rt ping
           # Collect environment variables for the build
