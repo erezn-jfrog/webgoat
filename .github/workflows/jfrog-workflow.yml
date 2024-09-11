@@ -31,4 +31,5 @@ jobs:
           # Collect VCS details from git and add them to the build
           jf rt bag
           # Publish build info
-          jf rt bp  --project ${{ vars.JS_Projects }} ${{ vars.JS_Build_Name }} ${{ vars.JS_Build_Number }} 
+          #jf rt bp  --project ${{ vars.JS_Projects }} ${{ vars.JS_Build_Name }} ${{ vars.JS_Build_Number }} 
+          jf rt bp ${{ vars.JS_Build_Name }} ${{ vars.JS_Build_Number }} 
