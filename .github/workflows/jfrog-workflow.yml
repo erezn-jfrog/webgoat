@@ -21,6 +21,15 @@ jobs:
           ## JF_USER: ${{ secrets.JF_USER }}
           ## JF_PASSWORD: ${{ secrets.JF_PASSWORD }}
 
+      - name: Setup JFrog CLI
+        uses: jfrog/setup-jfrog-cli@v4
+        env:  
+           JF_URL: ${{ secrets.JF_URL }}
+        with:
+           oidc-provider-name: ${{ env.OIDC_PROVIDER }}
+           oidc-audience: ${{ env.OIDC_AUDIENCE }}
+
+
       - name: Run JFrog CLI
         run: |
           #jfrog c add ${{ secrets.JF_SERVER_ID }} --url ${{ secrets.JF_URL }} --access-token ${{ secrets.JF_ACCESS_TOKEN }}
