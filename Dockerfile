@@ -1,4 +1,4 @@
-FROM docker.io/eclipse-temurin:23_37-jre
+FROM docker.io/eclipse-temurin:23.0.2_7-jre
 LABEL NAME = "WebGoat: A deliberately insecure Web Application"
 LABEL maintainer = "WebGoat team"
 
